@@ -296,7 +296,7 @@ cutCakeBtn?.addEventListener('click', async () => {
 
 // ROMANTIC PASSWORD PROTECTION
 
-const correctPassword = "Akshithasrinathreddy_03";
+const correctPassword = "Akshitha_03"; // Change this to your desired password
 
 const passwordForm = document.getElementById("passwordForm");
 const passwordInput = document.getElementById("sitePassword");

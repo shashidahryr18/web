@@ -1504,7 +1504,7 @@ footer,
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background: linear-gradient(135deg, #ffe0ec, #f8b6d0, #fce4ec);
+    background: linear-gradient(135deg, #ffe0ec, #f2f5b5, #fef8e4);
     font-family: 'Poppins', sans-serif;
 }
 
@@ -1572,7 +1572,7 @@ footer,
     border: none;
     border-radius: 15px;
     color: white;
-    background: linear-gradient(135deg, #ec6c9e, #c83272);
+    background: linear-gradient(135deg, #e8ec6c, #cdcd59);
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     font-weight: 600;
