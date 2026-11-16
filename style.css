@@ -1492,3 +1492,134 @@ footer,
         font-size: 23px;
     }
 }
+
+
+/* ===== ROMANTIC PASSWORD LOCK ===== */
+
+#passwordScreen {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #ffe0ec, #f8b6d0, #fce4ec);
+    font-family: 'Poppins', sans-serif;
+}
+
+.lock-card {
+    width: 100%;
+    max-width: 430px;
+    padding: 45px 30px;
+    text-align: center;
+    background: rgba(255,255,255,0.82);
+    backdrop-filter: blur(20px);
+    border: 1px solid white;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(190,70,120,0.22);
+}
+
+.heart-lock {
+    font-size: 75px;
+    animation: heartBeat 1.5s infinite;
+}
+
+.lock-card h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px;
+    color: #bd376b;
+    margin: 15px 0;
+}
+
+.lock-card p {
+    color: #87516a;
+    line-height: 1.7;
+}
+
+.password-box {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    padding: 5px 12px;
+    background: white;
+    border: 1px solid #efb3cb;
+    border-radius: 15px;
+}
+
+.password-box input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px 5px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+}
+
+.password-box button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 19px;
+}
+
+.unlock-btn {
+    width: 100%;
+    padding: 15px;
+    margin-top: 18px;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    background: linear-gradient(135deg, #ec6c9e, #c83272);
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.unlock-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(200,50,114,0.3);
+}
+
+#passwordError {
+    color: #d22d58;
+    font-weight: 600;
+    min-height: 22px;
+}
+
+.bottom-heart {
+    color: #bd376b;
+    margin-top: 20px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+}
+
+@keyframes heartBeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+#passwordScreen.unlocking {
+    animation: passwordFade 0.8s forwards;
+}
+
+@keyframes passwordFade {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@media(max-width: 480px) {
+    .lock-card {
+        padding: 35px 22px;
+    }
+
+    .lock-card h1 {
+        font-size: 31px;
+    }
+}
