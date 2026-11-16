@@ -294,4 +294,44 @@ cutCakeBtn?.addEventListener('click', async () => {
 });
 
 
+// ROMANTIC PASSWORD PROTECTION
+
+const correctPassword = "Akshithasrinathreddy_03";
+
+const passwordForm = document.getElementById("passwordForm");
+const passwordInput = document.getElementById("sitePassword");
+const passwordError = document.getElementById("passwordError");
+const passwordScreen = document.getElementById("passwordScreen");
+const siteContent = document.getElementById("siteContent");
+const togglePassword = document.getElementById("togglePassword");
+
+// Show or hide password
+togglePassword.addEventListener("click", function () {
+    passwordInput.type =
+        passwordInput.type === "password" ? "text" : "password";
+});
+
+// Verify password
+passwordForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    if (passwordInput.value === correctPassword) {
+        passwordError.textContent = "";
+
+        siteContent.hidden = false;
+        passwordScreen.classList.add("unlocking");
+
+        setTimeout(() => {
+            passwordScreen.style.display = "none";
+        }, 800);
+
+    } else {
+        passwordError.textContent =
+            "Oops! That's not the secret password 💔";
+
+        passwordInput.value = "";
+        passwordInput.focus();
+    }
+});
+
   

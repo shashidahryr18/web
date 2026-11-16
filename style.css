@@ -1370,3 +1370,125 @@ footer,
 }
 
 
+
+/* PASSWORD SCREEN */
+
+#passwordScreen {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #b4b486, #bab476, #d5e888);
+    font-family: 'Poppins', sans-serif;
+}
+
+.lock-card {
+    width: 100%;
+    max-width: 420px;
+    padding: 40px 28px;
+    text-align: center;
+    background: rgba(223, 221, 171, 0.78);
+    border: 1px solid rgba(226, 214, 106, 0.323);
+    border-radius: 28px;
+    box-shadow: 0 15px 50px rgba(180,70,110,0.2);
+}
+
+.heart-lock {
+    font-size: 75px;
+    animation: heartbeat 1.5s infinite;
+}
+
+.lock-card h1 {
+    color: #d07095;
+    font-size: 27px;
+    margin: 15px 0;
+}
+
+.lock-card p {
+    color: #87516a;
+    line-height: 1.6;
+}
+
+.password-box {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    padding: 5px 12px;
+    background: rgba(226, 232, 233, 0.274);
+    border: 1px solid #efb3cb;
+    border-radius: 14px;
+}
+
+.password-box input {
+    width: 100%;
+    padding: 13px 5px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background: transparent;
+}
+
+.password-box button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 19px;
+}
+
+.unlock-btn {
+    width: 100%;
+    padding: 15px;
+    margin-top: 18px;
+    border: none;
+    border-radius: 14px;
+    color: white;
+    background: linear-gradient(135deg, #d7d73d, #c83272);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.unlock-btn:hover {
+    transform: scale(1.04);
+}
+
+#passwordError {
+    color: #d22d58;
+    font-weight: bold;
+    min-height: 22px;
+}
+
+.bottom-heart {
+    color: #bd376b;
+    margin-top: 20px;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+#passwordScreen.unlocking {
+    animation: fadeOut 0.8s forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@media(max-width:480px) {
+    .lock-card {
+        padding: 30px 20px;
+    }
+
+    .lock-card h1 {
+        font-size: 23px;
+    }
+}

@@ -10,6 +10,46 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body style="--hero-image: url('assets/ak.jpeg');">
+
+  <!-- ROMANTIC PASSWORD LOCK -->
+  <div id="passwordScreen">
+    <div class="lock-card">
+      <div class="heart-lock">💗</div>
+
+      <p class="script-text">A little surprise awaits...</p>
+
+      <h1>Only For You ❤️</h1>
+
+      <p>
+        A special little universe is waiting for you, Thangimaa.
+        Enter your secret password to unlock it.
+      </p>
+
+      <form id="passwordForm">
+        <div class="password-box">
+          <input
+            type="password"
+            id="sitePassword"
+            placeholder="Enter your secret password"
+            required
+          />
+          <button type="button" id="togglePassword">👁️</button>
+        </div>
+
+        <button type="submit" class="unlock-btn">
+          Unlock My Surprise 💕
+        </button>
+      </form>
+
+      <p id="passwordError"></p>
+
+      <div class="bottom-heart">Made by Ur Brother❤️</div>
+    </div>
+  </div>
+
+  <!-- YOUR EXISTING HOMEPAGE STARTS HERE -->
+  <div id="siteContent" hidden>
+
   <div class="cursor-glow"></div>
   <div class="floating-bg"></div>
 
@@ -47,7 +87,11 @@
         <div><strong id="secs">00</strong><span>Secs</span></div>
       </div>
     </aside>
-  </main>
+    </main>
+
+  </div>
+  <!-- YOUR EXISTING HOMEPAGE ENDS HERE -->
+
   <script src="script.js"></script>
 </body>
 </html>
